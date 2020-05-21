@@ -1,0 +1,44 @@
+@import '~@/assets/styles/variables';
+
+.dashboard-docs {
+  padding: 24px 0;
+  background: white;
+}
+
+.dashboard-docs__button {
+  width: 120px;
+  height: 120px;
+  margin-right: 16px;
+  font-size: 48px;
+}
+
+.dashboard-docs__inner {
+  display: flex;
+}
+
+.dashboard-docs__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  margin-right: 16px;
+  color: $color-primary;
+  text-decoration: none;
+  border: 1px solid $color-primary;
+  border-radius: 4px;
+  transition: background-color .2s;
+
+  &:hover {
+    color: white;
+    background: $color-primary;
+  }
+
+  &:active {
+    background: darken($color-primary, 10%);
+  }
+
+  &:focus {
+    border-color: $color-secondary;
+  }
+}

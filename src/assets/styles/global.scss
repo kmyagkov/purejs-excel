@@ -1,0 +1,18 @@
+@import '~normalize.css';
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 1160px;
+  height: 100vh;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-secondary;
+  background: $color-secondary;
+  overflow-y: hidden;
+}

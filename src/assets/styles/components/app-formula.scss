@@ -1,0 +1,22 @@
+@import '~@/assets/styles/variables';
+
+.app-formula {
+  padding: 8px 16px;
+  background: white;
+}
+
+.app-formula__field {
+  display: flex;
+  align-items: center;
+}
+
+.app-formula__label {
+  margin-right: 4px;
+  font-weight: bold;
+  font-style: italic;
+  color: $color-primary;
+}
+
+.app-formula__input {
+  flex-grow: 1;
+}

@@ -1,0 +1,19 @@
+@import '~@/assets/styles/variables';
+
+.ex-input {
+  display: block;
+  height: 28px;
+  margin: 0;
+  padding: 4px 8px;
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-secondary;
+  border: 1px solid $color-secondary;
+  border-radius: 4px;
+  background: white;
+  outline: none;
+
+  &:focus {
+    border-color: $color-primary;
+  }
+}

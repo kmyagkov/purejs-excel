@@ -1,0 +1,11 @@
+.native-scroll {
+  overflow-y: hidden;
+}
+
+.native-scroll__inner {
+  padding-bottom: 30px;
+  margin-bottom: -30px;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,62 @@
+@import '~@/assets/styles/variables';
+
+.dashboard-chronology {
+  padding: 24px 0;
+}
+
+.dashboard-chronology__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.dashboard-chronology__col {
+  font-weight: bold;
+}
+
+.dashboard-chronology__docs-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.dashboard-chronology__docs-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 12px;
+  color: $color-secondary;
+  background: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color .2s;
+
+  &:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
+
+  &:hover {
+    color: white;
+    background: $color-primary;
+  }
+
+  &:active {
+    background: darken($color-primary, 10%);
+  }
+
+  &:focus {
+    border-color: $color-secondary;
+  }
+}
+
+.dashboard-chronology__docs-link {
+  flex-grow: 1;
+  padding: 12px;
+  margin-right: 32px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.dashboard-chronology__docs-date {
+  color: inherit;
+}

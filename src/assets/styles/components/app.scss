@@ -1,0 +1,27 @@
+@import '~@/assets/styles/variables';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app__header {
+  min-width: 1160px;
+  border-bottom: 1px solid $color-secondary;
+}
+
+.app__toolbar {
+  min-width: 1160px;
+  border-bottom: 1px solid $color-secondary;
+}
+
+.app__formula {
+  min-width: 1160px;
+  border-bottom: 1px solid $color-secondary;
+}
+
+.app__table {
+  min-width: 1160px;
+  height: 100%;
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1148">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Excel App</title>
+</head>
+<body>
+<div id="app" class="app">
+  <header class="app-header app__header">
+    <div class="logo app-header__logo">
+      <img src="img/logo.png" width="40" height="40" alt="Excel logo">
+    </div>
+    <h1 class="app-header__title">Pure JS Excel</h1>
+    <div class="app-header__field">
+      <input type="text" class="ex-input" placeholder="Новая таблица">
+    </div>
+    <div class="app-header__controls">
+      <button type="button" class="ex-btn">
+        <i class="material-icons">delete</i>
+      </button>
+      <button type="button" class="ex-btn">
+        <i class="material-icons">exit_to_app</i>
+      </button>
+    </div>
+  </header>
+  <aside class="app-toolbar app__toolbar">
+    <div class="app-toolbar__pane">
+      <button type="button" class="ex-btn ex-btn--size-s">
+        <i class="material-icons">format_align_left</i>
+      </button>
+      <button type="button" class="ex-btn ex-btn--size-s">
+        <i class="material-icons">format_align_center</i>
+      </button>
+      <button type="button" class="ex-btn ex-btn--size-s">
+        <i class="material-icons">format_align_right</i>
+      </button>
+      <button type="button" class="ex-btn ex-btn--size-s">
+        <i class="material-icons">format_align_justify</i>
+      </button>
+    </div>
+    <div class="app-toolbar__pane">
+      <button type="button" class="ex-btn ex-btn--size-s">
+        <i class="material-icons">format_bold</i>
+      </button>
+      <button type="button" class="ex-btn ex-btn--size-s">
+        <i class="material-icons">format_italic</i>
+      </button>
+      <button type="button" class="ex-btn ex-btn--size-s">
+        <i class="material-icons">format_underlined</i>
+      </button>
+    </div>
+  </aside>
+  <aside class="app-formula app__formula">
+    <div class="app-formula__field">
+      <label for="formula" class="app-formula__label">f(x)</label>
+      <div class="ex-input app-formula__input" id="formula" contenteditable spellcheck="false"></div>
+    </div>
+  </aside>
+  <div class="app-table app__table native-scroll">
+    <div class="native-scroll__inner">
+      <div class="app-table__row">
+        <div class="app-table__cell app-table__cell--header">#</div>
+        <div class="app-table__cell app-table__cell--header">A</div>
+        <div class="app-table__cell app-table__cell--header">B</div>
+        <div class="app-table__cell app-table__cell--header">C</div>
+        <div class="app-table__cell app-table__cell--header">D</div>
+      </div>
+      <div class="app-table__row">
+        <div class="app-table__cell">1</div>
+        <div class="app-table__cell">Cell 1</div>
+        <div class="app-table__cell">Cell 2</div>
+        <div class="app-table__cell">Cell 3</div>
+        <div class="app-table__cell">Cell 4</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
