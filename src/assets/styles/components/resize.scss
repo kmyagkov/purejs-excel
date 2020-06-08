@@ -1,0 +1,27 @@
+@import '~@/assets/styles/variables';
+
+.resize {
+  position: absolute;
+  background: transparent;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background: $color-primary;
+  }
+
+  &--col {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    cursor: col-resize;
+  }
+
+  &--row {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    cursor: row-resize;
+  }
+}

@@ -16,3 +16,5 @@ import './components/dashboard-chronology.scss';
 
 import './components/native-scroll.scss';
 import './components/container.scss';
+
+import './components/resize.scss';

@@ -4,7 +4,12 @@ const CODES = {
 };
 
 const createCol = (col) => {
-  return `<div class="app-table__cell app-table__cell--header">${col}</div>`;
+  return (`
+    <div class="app-table__cell app-table__cell--header">
+      ${col}
+      <div class="resize resize--col"></div>
+    </div>
+  `);
 };
 
 const createCell = () => {
@@ -22,9 +27,14 @@ const toChar = (_, i) => {
 };
 
 const createRow = (content, i) => {
+  const resizer = i ? `<div class="resize resize--row"></div>` : '';
+
   return (`
     <div class="app-table__row">
-      <div class="app-table__cell">${i ? i : ''}</div>
+      <div class="app-table__cell">
+        ${i ? i : ''}
+        ${resizer}
+      </div>
       ${content}
     </div>
   `);
