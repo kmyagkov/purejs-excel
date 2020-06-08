@@ -2,6 +2,7 @@
 
 .app-table {
   background: white;
+  overflow-x: scroll;
 }
 
 .app-table__row {
@@ -10,13 +11,18 @@
 
 .app-table__cell {
   position: relative;
-  min-width: 80px;
-  width: 80px;
+  flex: 0 0 80px;
   padding: 4px 8px;
   border-right: 1px solid $color-secondary;
   border-bottom: 1px solid $color-secondary;
+  user-select: none;
 
   &--header {
     background: lighten($color-primary, 70%);
+  }
+
+  &:first-child {
+    flex-basis: 40px;
+    text-align: center;
   }
 }

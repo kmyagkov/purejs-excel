@@ -4,8 +4,13 @@
   position: absolute;
   background: transparent;
   transition: background-color 0.2s;
+  z-index: 5;
 
   &:hover {
+    background: $color-primary;
+  }
+
+  &--highlight {
     background: $color-primary;
   }
 
@@ -13,7 +18,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 4px;
+    width: 6px;
     cursor: col-resize;
   }
 
@@ -21,7 +26,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 4px;
+    height: 6px;
     cursor: row-resize;
   }
 }
