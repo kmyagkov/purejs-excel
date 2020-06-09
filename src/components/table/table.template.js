@@ -3,21 +3,26 @@ const CODES = {
   Z: 90,
 };
 
-const createCol = (col) => {
+const createCol = (col, i) => {
   return (`
-    <div class="app-table__cell app-table__cell--header">
+    <div
+      class="app-table__cell app-table__cell--header"
+      data-type="resizable"
+      data-col="${i}"
+    >
       ${col}
-      <div class="resize resize--col"></div>
+      <div class="resize resize--col" data-resize="col"></div>
     </div>
   `);
 };
 
-const createCell = () => {
+const createCell = (_, i) => {
   return (`
     <div
       class="app-table__cell"
       contenteditable
       spellcheck="false"
+      data-col="${i}"
     ></div>
   `);
 };
@@ -27,10 +32,14 @@ const toChar = (_, i) => {
 };
 
 const createRow = (content, i) => {
-  const resizer = i ? `<div class="resize resize--row"></div>` : '';
+  const resizer = i ?
+    `<div class="resize resize--row"
+          data-resize="row" 
+    ></div>` :
+    '';
 
   return (`
-    <div class="app-table__row">
+    <div class="app-table__row" data-type="resizable" data-resize="row">
       <div class="app-table__cell">
         ${i ? i : ''}
         ${resizer}
