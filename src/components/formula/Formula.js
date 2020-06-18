@@ -1,4 +1,5 @@
 import ExcelComponent from '@core/ExcelComponent';
+import {$} from '@core/DOM';
 
 export default class Formula extends ExcelComponent {
   static root = {
@@ -6,10 +7,22 @@ export default class Formula extends ExcelComponent {
     className: 'app-formula app__formula',
   }
 
-  constructor($root) {
+  constructor($root, options) {
     super($root, {
       name: 'Formula',
-      listeners: ['input'],
+      listeners: ['input', 'keydown'],
+      ...options,
+    });
+  }
+
+  init() {
+    super.init();
+    this.$formula = this.$root.find('#formula');
+    this.$on('table:select', (cell) => {
+      this.$formula.textContent(cell.textContent());
+    });
+    this.$on('table:input', (cell) => {
+      this.$formula.textContent(cell.textContent());
     });
   }
 
@@ -27,6 +40,16 @@ export default class Formula extends ExcelComponent {
   }
 
   onInput(event) {
-    console.log('Formula:oninput', event);
+    const text = $(event.target).textContent();
+    this.$emit('formula:input', text);
+  }
+
+  onKeydown(event) {
+    const keys = ['Enter', 'Tab'];
+
+    if (keys.includes(event.key)) {
+      event.preventDefault();
+      this.$emit('formula:done');
+    }
   }
 }

@@ -6,6 +6,12 @@ export default class Header extends ExcelComponent {
     className: 'app-header app__header',
   }
 
+  constructor($root, options) {
+    super($root, {
+      ...options,
+    });
+  }
+
   html() {
     return (
       `<div class="logo app-header__logo">

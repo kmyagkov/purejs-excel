@@ -51,7 +51,7 @@ export const resizeHandler = ($root, event) => {
   };
 
   document.onmouseup = () => {
-    const cssProp = resizeType === 'col' ? 'flexBasis' : 'height';
+    const cssProp = resizeType === 'col' ? 'width' : 'height';
 
     document.onmousemove = null;
     $resizer.removeClass('resize--highlight');
