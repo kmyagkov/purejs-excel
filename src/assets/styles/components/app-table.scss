@@ -11,7 +11,8 @@
 
 .app-table__cell {
   position: relative;
-  flex: 0 0 80px;
+  flex: 0 0 auto;
+  width: 80px;
   padding: 4px 8px;
   border-right: 1px solid $color-secondary;
   border-bottom: 1px solid $color-secondary;
@@ -24,5 +25,9 @@
   &:first-child {
     flex-basis: 40px;
     text-align: center;
+  }
+
+  &.selected {
+    background: lighten($color-primary, 60%);
   }
 }
